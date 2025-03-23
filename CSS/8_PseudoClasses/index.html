@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes & States Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Pseudo-classes & States Demo</h1>
+
+    <section class="link-section">
+        <h2>Link States</h2>
+        <p>
+            Here's a <a href="#">normal link</a> that you haven't clicked yet. The following link will appear as
+            <a href="https://example.com">visited</a> once you've clicked it. Try hovering over these links
+            and clicking them to see different states.
+        </p>
+        <p>
+            Check out our <a href="#">features page</a>, <a href="#">pricing</a>, and <a href="#">contact us</a> 
+            for more information.
+        </p>
+    </section>
+
+    <section class="form-section">
+        <h2>Form Field States</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="disabled-example">Disabled Field:</label>
+                <input type="text" id="disabled-example" placeholder="This field is disabled" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+
+            <button type="submit">Submit Form</button>
+        </form>
+    </section>
+</body>
+</html>

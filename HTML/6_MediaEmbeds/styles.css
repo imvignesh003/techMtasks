@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #5c6bc0;
+    --secondary-color: #333;
+    --background-color: #f9f9f9;
+    --light-gray: #eee;
+    --border-color: #ddd;
+    --accent-color: #ff7043;
+    --success-color: #66bb6a;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.2rem;
+  }
+  
+  .subtitle {
+    opacity: 0.9;
+    font-weight: 300;
+    margin-top: 0.5rem;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  
+  .section-header {
+    padding: 1.5rem;
+    background-color: var(--light-gray);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+  }
+  
+  .section-content {
+    padding: 1.5rem;
+  }
+  
+  p {
+    margin-top: 0;
+  }
+  
+  /* Video styles */
+  .video-container {
+    margin-top: 1.5rem;
+    background-color: black;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  video {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+  }
+  
+  /* Audio styles */
+  .audio-exercise {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background-color: var(--light-gray);
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-color);
+  }
+  
+  .audio-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  audio {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .example-text {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 4px;
+    font-style: italic;
+    border-left: 3px solid var(--primary-color);
+  }
+  
+  .pronunciation-tip {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(102, 187, 106, 0.1);
+    border-radius: 4px;
+    border-left: 3px solid var(--success-color);
+  }
+  
+  .tip-title {
+    font-weight: 600;
+    color: var(--success-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--light-gray);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    h1 {
+      font-size: 1.8rem;
+    }
+    
+    section {
+      margin-bottom: 2rem;
+    }
+  }

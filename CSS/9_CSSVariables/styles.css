@@ -1,0 +1,100 @@
+:root {
+    --main-bg-color: #ffffff;
+    --secondary-bg-color: #f3f4f6;
+    --main-text-color: #333333;
+    --secondary-text-color: #4b5563;
+    --accent-color: #3b82f6;
+    --border-color: #e5e7eb;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --header-height: 60px;
+    --content-width: 1200px;
+}
+
+.dark-theme {
+    --main-bg-color: #1f2937;
+    --secondary-bg-color: #111827;
+    --main-text-color: #f9fafb;
+    --secondary-text-color: #d1d5db;
+    --accent-color: #60a5fa;
+    --border-color: #374151;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+@media (prefers-color-scheme: dark) {
+    .system-theme {
+        --main-bg-color: #1f2937;
+        --secondary-bg-color: #111827;
+        --main-text-color: #f9fafb;
+        --secondary-text-color: #d1d5db;
+        --accent-color: #60a5fa;
+        --border-color: #374151;
+        --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    height: var(--header-height);
+    background-color: var(--secondary-bg-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+main {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.card {
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+h1, h2 {
+    color: var(--main-text-color);
+}
+
+p {
+    color: var(--secondary-text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.theme-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}

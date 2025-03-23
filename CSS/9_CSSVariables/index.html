@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Theme Switcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="system-theme">
+    <header>
+        <h1>CSS Variables Theme Switcher</h1>
+    </header>
+    
+    <main>
+        <div class="theme-controls">
+            <button onclick="document.body.className = ''">Light Theme</button>
+            <button onclick="document.body.className = 'dark-theme'">Dark Theme</button>
+            <button onclick="document.body.className = 'system-theme'">System Preference</button>
+        </div>
+        
+        <div class="card">
+            <h2>About CSS Variables</h2>
+            <p>CSS Variables (officially called Custom Properties) allow you to define reusable values that can be referenced throughout your stylesheet. They're especially useful for theming and maintaining consistency across your design.</p>
+            <p>Variables are defined using the <code>--variable-name</code> syntax and accessed using the <code>var(--variable-name)</code> function.</p>
+            <a href="#">Learn more about CSS Variables</a>
+        </div>
+        
+        <div class="card">
+            <h2>Benefits of Theme Switching</h2>
+            <p>Implementing theme switching with CSS Variables offers several advantages:</p>
+            <ul>
+                <li>Improved accessibility for users with different visual preferences</li>
+                <li>Reduced eye strain in different lighting conditions</li>
+                <li>Potential energy savings on devices with OLED screens</li>
+                <li>Enhanced user experience through personalization</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>How It Works</h2>
+            <p>This example defines a set of variables in the <code>:root</code> selector for the light theme, then overrides those variables in the <code>.dark-theme</code> class. The theme can be toggled by adding or removing the class from the body element.</p>
+            <p>Additionally, a <code>.system-theme</code> class uses the <code>prefers-color-scheme</code> media query to automatically match the user's system preference.</p>
+        </div>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.body.className = savedTheme;
+            }
+            
+            const buttons = document.querySelectorAll('.theme-controls button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    localStorage.setItem('theme', document.body.className);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

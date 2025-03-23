@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+   
+    <h1>Workshop Registration</h1>
+   
+    <form action="/submit-registration" method="post">
+      <div class="form-group">
+        <label for="fullname">Full Name <span class="asterisk">*</span></label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+     
+      <div class="form-group">
+        <label for="email">Email Address <span class="asterisk">*</span></label>
+        <input type="email" id="email" name="email" required>
+        <p class="help-text">We'll send your confirmation to this address.</p>
+      </div>
+     
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+        <p class="help-text">Used only in case of last-minute changes.</p>
+      </div>
+     
+      <div class="form-group">
+        <label for="session">Preferred Session <span class="asterisk">*</span></label>
+        <select id="session" name="session" required>
+          <option value="">-- Select a session --</option>
+          <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+          <option value="afternoon">Afternoon (1:00 PM - 4:00 PM)</option>
+          <option value="evening">Evening (6:00 PM - 9:00 PM)</option>
+        </select>
+      </div>
+     
+      <div class="form-group">
+        <label for="experience">Experience Level</label>
+        <select id="experience" name="experience">
+          <option value="beginner">Beginner - New to the topic</option>
+          <option value="intermediate">Intermediate - Some prior knowledge</option>
+          <option value="advanced">Advanced - Extensive experience</option>
+        </select>
+      </div>
+     
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the <a href="#">Terms and Conditions</a> <span class="asterisk">*</span></label>
+      </div>
+     
+      <div class="checkbox-group">
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Subscribe to our newsletter for future workshop announcements</label>
+      </div>
+     
+      <button type="submit">Register Now</button>
+    </form>
+  </div>
+</body>
+</html>

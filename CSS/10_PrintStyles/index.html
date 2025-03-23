@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Styles & Accessibility Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <h1>Company Research Report</h1>
+    </header>
+    
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main id="main-content">
+        <div class="content">
+            <article class="article">
+                <h2>Quarterly Financial Analysis</h2>
+                <p>This report provides a comprehensive analysis of the company's financial performance for Q1 2025. The data presented here offers insights into revenue growth, profit margins, and market positioning compared to industry benchmarks.</p>
+                
+                <h3>Executive Summary</h3>
+                <p>The first quarter of 2025 demonstrated strong financial results across all business units. Revenue increased by 15% year-over-year, while operating margins improved by 2.3 percentage points. These improvements can be attributed to strategic initiatives implemented in Q4 2024 and favorable market conditions.</p>
+                
+                <table aria-labelledby="financial-table-title">
+                    <caption id="financial-table-title">Financial Highlights (Q1 2025)</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Metric</th>
+                            <th scope="col">Q1 2025</th>
+                            <th scope="col">Q1 2024</th>
+                            <th scope="col">YoY Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Revenue</th>
+                            <td>$24.5M</td>
+                            <td>$21.3M</td>
+                            <td class="success-text">+15%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Gross Profit</th>
+                            <td>$12.8M</td>
+                            <td>$10.2M</td>
+                            <td class="success-text">+25.5%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Operating Margin</th>
+                            <td>18.2%</td>
+                            <td>15.9%</td>
+                            <td class="success-text">+2.3pts</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Net Income</th>
+                            <td>$3.2M</td>
+                            <td>$2.1M</td>
+                            <td class="success-text">+52.4%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Key Findings</h3>
+                <p>The analysis reveals several significant trends that will impact our strategic planning for the remainder of 2025:</p>
+                <ul>
+                    <li>Product line A continues to be our strongest performer, with 22% growth compared to last year</li>
+                    <li>Expansion into the European market has exceeded expectations, contributing 18% to total revenue</li>
+                    <li>Digital transformation initiatives have reduced operational costs by approximately $1.2M</li>
+                    <li>Customer acquisition costs have decreased by 12%, while customer lifetime value has increased by 8%</li>
+                </ul>
+                
+                <h3>Recommendations</h3>
+                <p>Based on these findings, we recommend the following actions for Q2 2025:</p>
+                <ol>
+                    <li>Increase investment in Product line A by 15% to capitalize on market demand</li>
+                    <li>Accelerate European expansion with additional sales and marketing resources</li>
+                    <li>Complete Phase 2 of the digital transformation project ahead of schedule</li>
+                    <li>Review pricing strategy for Product lines B and C to improve margins</li>
+                </ol>
+                
+                <p>For additional information, please refer to the <a href="/detailed-reports/q1-2025">Complete Q1 2025 Financial Report</a>.</p>
+                
+                <div class="non-printable">
+                    <button type="button" onclick="window.print()">Print This Report</button>
+                </div>
+            </article>
+            
+            <aside class="sidebar">
+                <h3>Related Reports</h3>
+                <ul>
+                    <li><a href="#">Market Analysis Q1 2025</a></li>
+                    <li><a href="#">Competitor Landscape</a></li>
+                    <li><a href="#">Industry Trends Report</a></li>
+                    <li><a href="#">Strategic Planning Guide</a></li>
+                </ul>
+                
+                <h3>Quick Tools</h3>
+                <ul>
+                    <li><a href="#">Export to Excel</a></li>
+                    <li><a href="#">Share with Team</a></li>
+                    <li><a href="#">Schedule Presentation</a></li>
+                </ul>
+                
+                <h3>Need Help?</h3>
+                <p>Contact our research team at <a href="mailto:research@company.com">research@company.com</a></p>
+            </aside>
+        </div>
+        
+        <div class="page-url">https://company.com/research/financial-analysis-q1-2025</div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Company Name. All rights reserved.</p>
+        <p>123 Business Street, City, Country | <a href="tel:+11234567890">+1 (123) 456-7890</a></p>
+    </footer>
+</body>
+</html>

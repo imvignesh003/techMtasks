@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Plans</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Choose Your Perfect Plan</h1>
+    <p class="pricing-description">
+      Select the plan that best fits your needs. All plans include our core features, 
+      with additional benefits as you upgrade. Start with a 14-day free trial on any plan.
+    </p>
+    
+    <div class="pricing-table-container">
+      <table>
+        <thead>
+          <tr>
+            <th class="plan-header">Plan</th>
+            <th class="plan-header">Price</th>
+            <th class="plan-header">Features</th>
+            <th></th> <!-- Empty header for the action button column -->
+          </tr>
+        </thead>
+        
+        <tbody>
+          <!-- Basic Plan -->
+          <tr>
+            <td>
+              <h3>Basic</h3>
+              <p>Perfect for individuals and small projects</p>
+            </td>
+            <td class="price">
+              $9.99<span class="period">/month</span>
+            </td>
+            <td>
+              <ul>
+                <li class="feature-available">5 Projects</li>
+                <li class="feature-available">10GB Storage</li>
+                <li class="feature-available">Basic Analytics</li>
+                <li class="feature-unavailable">Priority Support</li>
+                <li class="feature-unavailable">Custom Domain</li>
+              </ul>
+            </td>
+            <td>
+              <a href="#" class="btn btn-outline">Get Started</a>
+            </td>
+          </tr>
+          
+          <!-- Pro Plan -->
+          <tr class="highlight-plan">
+            <td>
+              <div class="popular-badge">Most Popular</div>
+              <h3>Professional</h3>
+              <p>Ideal for growing businesses and teams</p>
+            </td>
+            <td class="price">
+              $24.99<span class="period">/month</span>
+            </td>
+            <td>
+              <ul>
+                <li class="feature-available">20 Projects</li>
+                <li class="feature-available">50GB Storage</li>
+                <li class="feature-available">Advanced Analytics</li>
+                <li class="feature-available">Priority Support</li>
+                <li class="feature-available">Custom Domain</li>
+              </ul>
+            </td>
+            <td>
+              <a href="#" class="btn btn-primary">Get Started</a>
+            </td>
+          </tr>
+          
+          <!-- Enterprise Plan -->
+          <tr>
+            <td>
+              <h3>Enterprise</h3>
+              <p>Complete solution for large organizations</p>
+            </td>
+            <td class="price">
+              $49.99<span class="period">/month</span>
+            </td>
+            <td>
+              <ul>
+                <li class="feature-available">Unlimited Projects</li>
+                <li class="feature-available">250GB Storage</li>
+                <li class="feature-available">Premium Analytics</li>
+                <li class="feature-available">24/7 Dedicated Support</li>
+                <li class="feature-available">Multiple Custom Domains</li>
+              </ul>
+            </td>
+            <td>
+              <a href="#" class="btn btn-outline">Get Started</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
