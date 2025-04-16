@@ -14,17 +14,6 @@
     <p><strong>Phone:</strong> <%= user.getPhone() %></p>
     <p><strong>Address:</strong> <%= user.getAddress() %></p>
     <p><strong>Gender:</strong> <%= user.getGender() %></p>
-    <p><strong>Hobbies:</strong> 
-        <%
-            String[] hobbies = user.getHobbies();
-            if (hobbies != null) {
-                for (String hobby : hobbies) {
-                    out.print(hobby + " ");
-                }
-            } else {
-                out.print("None");
-            }
-        %>
-    </p>
+    <p><strong>Registration Status:</strong> <%= request.getAttribute("registrationStatus") %></p>
 </body>
 </html>

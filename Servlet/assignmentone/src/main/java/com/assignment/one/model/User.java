@@ -1,14 +1,11 @@
 package com.assignment.one.model;
 
-import java.util.Arrays;
-
 public class User {
     private String name;
     private String email;
     private String phone;
     private String address;
     private String gender;
-    private String[] hobbies;
 
     public String getName() {
         return name;
@@ -50,18 +47,8 @@ public class User {
         this.gender = gender;
     }
 
-    public String[] getHobbies() {
-        return hobbies;
-    }
-
-    public void setHobbies(String[] hobbies) {
-        this.hobbies = hobbies;
-    }
-
     @Override
     public String toString() {
-        return "User [name=" + name + ", email=" + email + ", phone=" + phone +
-               ", address=" + address + ", gender=" + gender +
-               ", hobbies=" + Arrays.toString(hobbies) + "]";
+        return "User [name=" + name + ", email=" + email + ", phone=" + phone + ", address=" + address + ", gender=" + gender + "]";
     }
 }

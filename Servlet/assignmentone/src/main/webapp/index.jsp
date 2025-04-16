@@ -15,11 +15,6 @@
         <input type="radio" name="gender" value="Male">Male
         <input type="radio" name="gender" value="Female">Female<br><br>
 
-        Hobbies:
-        <input type="checkbox" name="hobbies" value="Reading">Reading
-        <input type="checkbox" name="hobbies" value="Traveling">Traveling
-        <input type="checkbox" name="hobbies" value="Gaming">Gaming<br><br>
-
         <input type="submit" value="Submit">
     </form>
 </body>

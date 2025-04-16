@@ -3,15 +3,13 @@ package com.assignment.one.controller;
 import java.io.IOException;
 
 import com.assignment.one.model.User;
+import com.assignment.one.service.UserService;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
-
-
 
 public class UserController extends HttpServlet {
     @Override
@@ -22,7 +20,6 @@ public class UserController extends HttpServlet {
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
         String gender = request.getParameter("gender");
-        String[] hobbies = request.getParameterValues("hobbies");
 
         User user = new User();
         user.setName(name);
@@ -30,8 +27,11 @@ public class UserController extends HttpServlet {
         user.setPhone(phone);
         user.setAddress(address);
         user.setGender(gender);
-        user.setHobbies(hobbies);
+        UserService userService = new UserService();
+        boolean isRegistered = userService.registerUser(user);
+        System.out.println(isRegistered);
         request.setAttribute("user", user);
+        request.setAttribute("registrationStatus", isRegistered);
         RequestDispatcher rd = request.getRequestDispatcher("display.jsp");
         rd.forward(request, response);
     }
