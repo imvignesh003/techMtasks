@@ -17,5 +17,8 @@
 
         <input type="submit" value="Submit">
     </form>
+    <form action="UserController" method="get">
+        <button type="submit" name="action" value="list">List Users</button>
+    </form>
 </body>
 </html>
